@@ -1,0 +1,18 @@
+.clone-app{
+  height: 100vh;
+  background-color: lightgray;
+  padding: 2%;
+  box-sizing: border-box;
+}
+.chatapp_container{
+  background-color: #f6f6f6;
+  height: 100%;
+  display: flex;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.75);
+}
+.chatapp_sidebar{
+  flex: 0.35;
+}
+.chatapp_main{
+  flex: 0.65;
+}
