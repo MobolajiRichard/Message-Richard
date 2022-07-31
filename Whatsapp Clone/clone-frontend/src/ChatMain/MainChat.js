@@ -1,13 +1,21 @@
 import React from 'react'
+import { useStateValue } from '../StateProvider'
 
-function MainChat(props) {
-    
+
+function MainChat({messages}) {
+  const [{user}, dispatch] = useStateValue()
   return (
-    <p className={props.class}>
-    <span className='chat_sender'>Richard</span>
-    This is a message
-    <span className='chat_timestamp'>{new Date().toUTCString()}</span>
-</p>
+    <div>
+          {messages.map((message)=>(
+           <p className={`chat_message ${message.name === user.displayName && 'chat_receiver'}`}>
+        <span className='chat_sender'>{message.name}</span>
+        {message.message}
+        <span className='chat_timestamp'>
+          {new Date(message.timestamp?.toDate()).toLocaleString()}
+          </span>
+      </p>
+      ))} 
+    </div>
   )
 }
 

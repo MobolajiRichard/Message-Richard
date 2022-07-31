@@ -3,6 +3,7 @@
   background-color: lightgray;
   padding: 2%;
   box-sizing: border-box;
+  overflow: hidden;
 }
 .chatapp_container{
   background-color: #f6f6f6;
@@ -15,4 +16,17 @@
 }
 .chatapp_main{
   flex: 0.65;
+}
+
+.login_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  /* overflow: hidden; */
+}
+
+.login_image{
+
 }
